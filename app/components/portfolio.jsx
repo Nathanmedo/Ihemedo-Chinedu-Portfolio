@@ -139,6 +139,16 @@ export default function Portfolio() {
       details:
         "This is a UI work that focuses on promoting a companies product. It is built with NextJS, TaiwindCSS, gsap, framer-motion etc.",
     },
+    {
+      id: 12,
+      title: "PushShamer",
+      category: "Backend-API",
+      image: "/assets/images/push-shamer.gif",
+      year: "2025",
+      url:"https://github.com/Nathanmedo/PushShamer",
+      details:
+        "An AI-powered GitHub App that reviews your code and provides constructive feedback on pull requests and issues.",
+    },
   ];
 
   const filteredWorks = works.filter((work, index, self) => {

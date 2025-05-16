@@ -45,20 +45,35 @@ export default function Story() {
                 both user needs and business goals.
               </p>
             </div>
-            <motion.div
-              className="mt-8"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <a
-                href="https://www.linkedin.com/in/chinedu-ihemedo-2307a4284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
+            <div className="flex mt-8 gap-2">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
               >
-                Let's Connect
-              </a>
-            </motion.div>
+                <a
+                  href="https://www.linkedin.com/in/chinedu-ihemedo-2307a4284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                  className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
+                >
+                  Let's Connect
+                </a>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <a
+                  href="/assets/files/Ihemedo_Chinedu_Resume.pdf"
+                  download
+                  className="inline-flex items-center px-6 py-3 border border-black text-black hover:bg-inherit hover:text-white transition-colors duration-300 bg-white"
+                >
+                  Download Resume
+                </a>
+              </motion.div>
+            </div>
           </motion.div>
           <motion.div
             className="relative"

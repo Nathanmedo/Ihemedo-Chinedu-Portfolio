@@ -41,7 +41,7 @@ export default function Gallery() {
       color: "from-yellow-300 to-yellow-500",
       textColor: "text-black",
       border: "border-yellow-200",
-      icon:'/assets/tech/javaScript.png'
+      icon:'/assets/tech/javascript.png'
     },
     {
       name: "HTML",
