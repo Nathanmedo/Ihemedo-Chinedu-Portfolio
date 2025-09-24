@@ -149,6 +149,16 @@ export default function Portfolio() {
       details:
         "An AI-powered GitHub App that reviews your code and provides constructive feedback on pull requests and issues.",
     },
+    {
+      id: 13,
+      title: "Telegram-Bot",
+      category: "Backend-API",
+      image: "/assets/images/push-shamer.gif",
+      year: "2025",
+      url:"https://github.com/Nathanmedo/telegram-bot",
+      details:
+        "A Telegram bot that automates crypto trading, rewards users for viewing ads, and supports referral bonuses. Built with Pyrogram.",
+    },
   ];
 
   const filteredWorks = works.filter((work, index, self) => {
@@ -179,7 +189,7 @@ export default function Portfolio() {
               key={category}
               variant={selectedCategory === category ? "default" : "outline"}
               onClick={() => setSelectedCategory(category)}
-              className="text-sm capitalize"
+              className={`text-sm cursor-pointer capitalize text-accent-foreground ${(selectedCategory === category) && "text-white"}`}
             >
               {category}
             </Button>

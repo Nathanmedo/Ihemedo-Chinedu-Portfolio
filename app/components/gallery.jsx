@@ -20,7 +20,14 @@ export default function Gallery() {
       color: "from-black to-gray-800",
       textColor: "text-white",
       border: "border-gray-700",
-      icon:'/assets/tech/next.png'
+      icon:'/nextjs_icon_dark.svg'
+    },
+    {
+      name: "Nest.js",
+      color: "from-pink-500 to-white",
+      textColor: "text-white",
+      border: "border-gray-700",
+      icon:'/nestjs.svg'
     },
     {
       name: "React",
@@ -34,7 +41,7 @@ export default function Gallery() {
       color: "from-blue-600 to-blue-800",
       textColor: "text-white",
       border: "border-blue-500",
-      icon:'/assets/tech/typescript.png'
+      icon:'/typescript.svg'
     },
     {
       name: "JavaScript",

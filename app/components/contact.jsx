@@ -139,7 +139,7 @@ export default function Contact() {
                   </FormItem>
                 )}
               />
-              <Button type="submit" variant="ghost" className="w-full text-white">
+              <Button type="submit" variant="ghost" className="w-full text-black bg-white hover:text-white hover:bg-zinc-600">
                 {submitting ? "Sending..." : "Send Message"} 
               </Button>
             </form>

@@ -45,7 +45,7 @@ export default function Story() {
                 both user needs and business goals.
               </p>
             </div>
-            <div className="flex mt-8 gap-2">
+            <div className="flex mt-8 gap-2 flex-wrap">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
