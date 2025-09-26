@@ -85,7 +85,7 @@ export default function Story() {
             <div className="aspect-square relative overflow-hidden rounded-lg">
               <div className="absolute image-ratio inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 z-10"></div>
               <img
-                src="/assets/images/portfolio-main-image.jpeg"
+                src="/assets/images/portfolio-main-image-2.jpeg"
                 alt="Profile"
                 className="w-full h-full object-cover object-top"
               />

@@ -1,18 +1,17 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
-
+import { defaultWorks } from "@/constants";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin", "latin-ext"],
 });
-
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -27,139 +26,38 @@ export default function Portfolio() {
     "Experimental/UI Showcase",
     "Foundational-Projects",
   ];
+  
+  
+  const [works, setWorks] = useState(defaultWorks);
+  
+  useEffect(()=>{
+    async function fetchProjects(){
+      try {
+        const response = await fetch('/api/portfolio');
+        let data = await response.json();
+        console.log(data)
+        data = data.map((item)=> (
+          {
+            id: item?._id,
+            title: item?.name,
+            category: "all",
+            image: item?.imageUrl,
+            year: item?.yearCreated,
+            url: item?.htmlUrl,
+            details: item?.description || "No description available",
+          }
+        ))
+        setWorks((prev)=> [...prev, ...data])
+      }catch(err){
+        console.log(err)
+      }
+    }
 
-  const works = [
-    {
-      id: 1,
-      title: "Rehab's store",
-      category: "Ecommerce-Projects",
-      image: "/assets/images/Ecommerce-frontend.png",
-      year: "2022",
-      url:"https://nathanmedo.github.io/E-commerce-Frontend",
-      details:
-        "This is a react app basically showcasing a cloth store. It is built with React and TaiiwindCSS",
-    },
-    {
-      id: 2,
-      title: "Independent Chemicals",
-      category: "Ecommerce-Projects",
-      image: "/assets/images/independentchem.png",
-      year: "2024",
-      url:"https://independentchementerprise.vercel.app",
-      details:
-        "This is an Ecommerce Store that sells Items. It is built with NextJs and wix API",
-    },
-    {
-      id: 3,
-      title: "Kanban App",
-      category: "Productivity-tools",
-      image: "/assets/images/kanban-app.png",
-      year: "2024",
-      url:"https://nathanmedo.github.io/kanban-app",
-      details:
-        "This is a Kanban App that helps you manage your tasks. It is built with React and TailwindCSS",
-    },
-    {
-      id: 4,
-      title: "Grocery-List App",
-      category: "Productivity-tools",
-      image: "/assets/images/todo-list.png",
-      year: "2023",
-      url:"https://nathanmedo.github.io/Todo-List",
-      details:
-        "This is a Grocery List App that helps you manage your groceries. It is built with React and TailwindCSS",
-    },
-    {
-      id: 5,
-      title: "Slider Effect Homepage",
-      category: "Frontend-Only",
-      image: "/assets/images/Slider-Effect.png",
-      year: "2024",
-      url:"https://nathanmedo.github.io/slider-effect",
-      details:
-        "This is an Early UI work . It is built with Html, CSS and Javascript.",
-    },
-    {
-      id: 10,
-      title: "Jidseg Company",
-      category: "Frontend-Only",
-      image: "/assets/images/Jidseg-frontend.png",
-      year: "2024",
-      url:"https://nathanmedo.github.io/company-prototype",
-      details:
-        "This is a  that serves job data to a frontend application. It is built with Html, CSS and Javascript.",
-    },
-    {
-      id: 11,
-      title: "NodeJs Job API",
-      category: "Backend-API",
-      image: "/assets/images/nodeapi.png",
-      url: "https://github.com/Nathanmedo/node-js",
-      year: "2024",
-      details:
-        "This is a NodeJs API that serves job data to a frontend application. It is built with ExpressJs and MongoDB.",
-    },
-    {
-      id: 7,
-      title: "Grocery-List App",
-      category: "Foundational-Projects",
-      image: "/assets/images/todo-list.png",
-      year: "2023",
-      url:"https://nathanmedo.github.io/Todo-List",
-      details:
-        "This is a Grocery List App that helps you manage your groceries. It is built with React and TailwindCSS",
-    },
-    {
-      id: 8,
-      title: "Slider Effect Homepage",
-      category: "Foundational-Projects",
-      image: "/assets/images/Slider-Effect.png",
-      year: "2022",
-      url:"https://nathanmedo.github.io/slider-effect",
-      details:
-        "This is an Early UI work . It is built with Html, CSS and Javascript.",
-    },
-    {
-      id: 9,
-      title: "Slider Effect Homepage",
-      category: "Experimental/UI Showcase",
-      image: "/assets/images/Slider-Effect.png",
-      year: "2022",
-      url:"https://nathanmedo.github.io/slider-effect",
-      details:
-        "This is an Early UI work . It is built with Html, CSS and Javascript.",
-    },
-    {
-      id: 6,
-      title: "ICN-web",
-      category: "Experimental/UI Showcase",
-      image: "/assets/images/icn-web.png",
-      year: "2025",
-      url:"https://icnweb.vercel.app",
-      details:
-        "This is a UI work that focuses on promoting a companies product. It is built with NextJS, TaiwindCSS, gsap, framer-motion etc.",
-    },
-    {
-      id: 12,
-      title: "PushShamer",
-      category: "Backend-API",
-      image: "/assets/images/push-shamer.gif",
-      year: "2025",
-      url:"https://github.com/Nathanmedo/PushShamer",
-      details:
-        "An AI-powered GitHub App that reviews your code and provides constructive feedback on pull requests and issues.",
-    },
-    {
-      id: 13,
-      title: "Telegram-Bot",
-      category: "Backend-API",
-      image: "/assets/images/push-shamer.gif",
-      year: "2025",
-      url:"https://github.com/Nathanmedo/telegram-bot",
-      details:
-        "A Telegram bot that automates crypto trading, rewards users for viewing ads, and supports referral bonuses. Built with Pyrogram.",
-    },
-  ];
+    fetchProjects();
+
+    return ()=> setWorks(defaultWorks)
+  }, [])
+
 
   const filteredWorks = works.filter((work, index, self) => {
     if (selectedCategory === "all") {
@@ -169,12 +67,8 @@ export default function Portfolio() {
   });
 
   return (
-  <section
-  id="works"
-   className={`bg-black py-20 ${poppins.className}`}>
-      <div
-      ref={ref}
-       className="container mx-auto px-4">
+    <section id="works" className={`bg-black py-20 ${poppins.className}`}>
+      <div ref={ref} className="container mx-auto px-4">
         <motion.h2
           className="mb-12 text-center text-3xl font-bold tracking-wider uppercase sm:text-4xl"
           initial={{ opacity: 0 }}
@@ -189,7 +83,9 @@ export default function Portfolio() {
               key={category}
               variant={selectedCategory === category ? "default" : "outline"}
               onClick={() => setSelectedCategory(category)}
-              className={`text-sm cursor-pointer capitalize text-accent-foreground ${(selectedCategory === category) && "text-white"}`}
+              className={`text-sm cursor-pointer capitalize text-accent-foreground ${
+                selectedCategory === category && "text-white"
+              }`}
             >
               {category}
             </Button>
@@ -206,18 +102,17 @@ export default function Portfolio() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Link
-                href={work.url}
-                >
+                <Link href={work.url}>
                   <Card className="overflow-hidden bg-zinc-900">
                     <CardContent className="p-0">
                       <div className="group relative">
                         <img
-                          src={work.image || "/placeholder.svg"}
+                          src={work.image}
                           alt={work.title}
+                          onError={(e)=> {e.currentTarget.src = "/assets/images/No Image placeholder.svg";}}
                           className="w-full transition-transform duration-500 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 lg:group-hover:opacity-100">
                           <h3 className="  text-white capitalize tracking-wider text-sm">
                             {work.title}
                           </h3>
@@ -231,6 +126,19 @@ export default function Portfolio() {
                       </div>
                     </CardContent>
                   </Card>
+                  <div className="lg:hidden mt-2 ">
+                    <div className="flex flex-col items-center justify-center bg-black/60">
+                      <h3 className="  text-white font-bold uppercase text-[16px] tracking-wider text-sm">
+                        {work.title}
+                      </h3>
+                      <p className="mt-[2px] text-sm font-semibold text-gray-300">
+                        {work.year}
+                      </p>
+                      <p className="mt-1 mx-4 text-center text-sm text-gray-300">
+                        {work.details}
+                      </p>
+                    </div>
+                  </div>
                 </Link>
               </motion.div>
             ))}

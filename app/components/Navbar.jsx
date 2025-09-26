@@ -1,14 +1,15 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import { Poppins } from "next/font/google";
 import { MenuIcon } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin", "latin-ext"],
 });
-
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -22,8 +23,19 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className={`z-[9999] right-0 p-4 absolute top-0 w-full ${poppins.className}`}>
-        <div className="container mx-auto">
+      <nav
+        className={`z-[9999] right-0 p-4 absolute top-0 w-full ${poppins.className}`}
+      >
+        <div className="container mx-auto flex items-center justify-between">
+          <Link href="#contact">
+          <Image
+            src="/assets/images/portfolio-logo.png"
+            alt="Nathanmedo_devs_Logo"
+            width={50}
+            height={50}
+            className="cursor-pointer "
+          />
+          </Link>
           <ul className="hidden md:flex justify-end space-x-6">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -44,44 +56,44 @@ export default function Navbar() {
         </div>
       </nav>
 
-      
       {/* Sidenav for mobile with animation */}
       <div
         className={`fixed inset-0 z-[99999] md:hidden transition-opacity duration-300 ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          open
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         } bg-black/40`}
         onClick={() => setOpen(false)}
         aria-hidden={!open}
       >
-          <aside
+        <aside
           className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-[100000] flex flex-col p-8 transform transition-transform duration-300 ${
             open ? "translate-x-0" : "translate-x-full"
           }`}
-            onClick={(e) => e.stopPropagation()}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            className="absolute top-4 right-6 text-2xl text-black focus:outline-none"
+            onClick={() => setOpen(false)}
+            aria-label="Close menu"
           >
-            <button
-              className="absolute top-4 right-4 text-2xl text-black focus:outline-none"
-              onClick={() => setOpen(false)}
-              aria-label="Close menu"
-            >
-              &times;
-            </button>
-            <ul className="flex flex-col mt-12 space-y-6">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="text-black text-lg font-medium hover:text-gray-600"
-                    onClick={() => setOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </aside>
-        </div>
+            &times;
+          </button>
+          <ul className="flex flex-col mt-12 items-center space-y-10">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="text-black text-lg font-medium hover:text-gray-600"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      </div>
     </>
   );
 }
-
