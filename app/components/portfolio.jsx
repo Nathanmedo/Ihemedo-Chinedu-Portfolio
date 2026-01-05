@@ -29,31 +29,31 @@ export default function Portfolio({active}) {
 
   const [works, setWorks] = useState(defaultWorks);
 
-  useEffect(() => {
-    async function fetchProjects() {
-      try {
-        const response = await fetch("/api/portfolio");
-        let data = await response.json();
-        console.log(data);
-        data = data.map((item) => ({
-          id: item?._id,
-          title: item?.name,
-          category: "all",
-          image: item?.imageUrl,
-          year: item?.yearCreated,
-          url: item?.htmlUrl,
-          details: item?.description || "No description available",
-        }));
-        setWorks((prev) => [...prev, ...data]);
-      } catch (err) {
-        console.log(err);
-      }
-    }
+  // useEffect(() => {
+  //   async function fetchProjects() {
+  //     try {
+  //       const response = await fetch("/api/portfolio");
+  //       let data = await response.json();
+  //       console.log(data);
+  //       data = data.map((item) => ({
+  //         id: item?._id,
+  //         title: item?.name,
+  //         category: "all",
+  //         image: item?.imageUrl,
+  //         year: item?.yearCreated,
+  //         url: item?.htmlUrl,
+  //         details: item?.description || "No description available",
+  //       }));
+  //       setWorks((prev) => [...prev, ...data]);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   }
 
-    fetchProjects();
+  //   fetchProjects();
 
-    return () => setWorks(defaultWorks);
-  }, []);
+  //   return () => setWorks(defaultWorks);
+  // }, []);
 
   const filteredWorks = works.filter((work, index, self) => {
     if (selectedCategory === "all") {
@@ -84,7 +84,7 @@ export default function Portfolio({active}) {
             />
           )}
         </motion.h2>
-        <div className="mb-12 flex flex-wrap justify-center gap-4">
+        <div className="mb-12 z-10 relative flex flex-wrap justify-center gap-4">
           {categories.map((category) => (
             <Button
               key={category}

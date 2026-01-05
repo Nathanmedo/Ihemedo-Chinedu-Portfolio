@@ -3,6 +3,7 @@
 import { sections } from "@/constants";
 import { useActiveSection } from "@/utils/hooks/useActiveSection";
 import { easeInOut, motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import { Poppins, Montserrat } from "next/font/google";
 import Image from "next/image";
 
@@ -100,7 +101,7 @@ export default function Story({ active }) {
                   href="https://www.linkedin.com/in/chinedu-ihemedo-2307a4284"
                   className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
                 >
-                  Let's Connect
+                  Let's Connect <ArrowUpRight/>
                 </a>
               </motion.div>
               <motion.div
@@ -108,6 +109,7 @@ export default function Story({ active }) {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
                 viewport={{ once: true }}
+                className="relative"
               >
                 <a
                   href="/assets/files/Ihemedo_Chinedu_Resume.pdf"
@@ -116,19 +118,19 @@ export default function Story({ active }) {
                 >
                   Download Resume
                 </a>
-              </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: -30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="absolute md:right-[20%] -right-[15%] transform  md:rotate-0 w-[120px] md:-top-[60px] -top-[65px] "
+                className="absolute right-[-100px] transform  md:rotate-0 w-[120px] md:-top-[60px] -top-[65px] "
               >
                 <img
                   src="/assets/images/arrow.png"
                   alt="arrow"
                   className="w-full h-full object-cover object-top"
                 />
+              </motion.div>
               </motion.div>
             </div>
           </motion.div>

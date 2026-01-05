@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { set, useForm } from "react-hook-form";
 import * as z from "zod";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -85,15 +85,15 @@ export default function Contact({ active }) {
       id="contact"
       className={`relative overflow-hidden bg-zinc-900 py-20 ${poppins.className}`}
     >
-      <div className="container relative z-10 mx-auto px-4">
+      <div className="container relative z-10 mx-auto px-4 flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mx-auto max-w-2xl text-center"
+          className="mx-auto max-w-2xl text-center flex flex-col items-center justify-center"
         >
-          <h2 className="mb-4 text-3xl z-10 font-bold tracking-tighter sm:text-4xl relative">
+          <h2 className="mb-4 text-3xl z-10 flex items-center justify-center max-w-fit  font-bold  tracking-tighter sm:text-4xl relative">
             Get in Touch
             {active === sections[4] && (
               <motion.img
@@ -101,8 +101,8 @@ export default function Contact({ active }) {
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.5, type: "spring" }}
                 viewport={{ once: true }}
-                className={`absolute size-[200px] z-[-1]  top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%]`}
-                src="/assets/images/contact brush.png"
+                className={`absolute size-[100px] z-[-1] right-[-80px]`}
+                src="/assets/images/phone.png"
                 alt="deco"
               />
             )}
@@ -128,11 +128,18 @@ export default function Contact({ active }) {
                   <FormItem>
                     <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input
-                        placeholder="Your name"
-                        {...field}
-                        className="bg-secondary  text-primary"
-                      />
+                      <div className="relative">
+                        <Input
+                          placeholder="Your name"
+                          {...field}
+                          className="bg-secondary peer  text-primary"
+                        />
+                        <img
+                          src="/assets/images/arrow2.png"
+                          className="size-40 absolute top-[-270%] duration-150 transition peer-focus:opacity-100 peer-focus:scale-100 opacity-0 scale-0"
+                          alt="desc-arrow"
+                        />
+                      </div>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -145,11 +152,18 @@ export default function Contact({ active }) {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input
-                        placeholder="your@email.com"
-                        {...field}
-                        className="bg-secondary  text-primary"
-                      />
+                      <div className="relative">
+                        <Input
+                          placeholder="your@email.com"
+                          {...field}
+                          className="bg-secondary peer text-primary"
+                        />
+                        <img
+                          src="/assets/images/arrow2.png"
+                          className="size-40 absolute top-[-270%] duration-150 transition peer-focus:opacity-100 peer-focus:scale-100 opacity-0 scale-0"
+                          alt="desc-arrow"
+                        />
+                      </div>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -162,11 +176,18 @@ export default function Contact({ active }) {
                   <FormItem>
                     <FormLabel>Message</FormLabel>
                     <FormControl>
-                      <Textarea
-                        placeholder="Tell me about your project or what you need to build"
-                        className="min-h-[120px] ffocus:outline-none focus:ring-2 focus:ring-[#e45c22] bg-secondary text-primary"
-                        {...field}
-                      />
+                      <div className="relative">
+                        <Textarea
+                          placeholder="Tell me about your project or what you need to build"
+                          className="min-h-[120px] peer focus:outline-none focus:ring-2 focus:ring-[#e45c22] bg-secondary text-primary"
+                          {...field}
+                        />
+                        <img
+                          src="/assets/images/arrow2.png"
+                          className="size-40 absolute top-[-80%] ml-4 duration-150 transition peer-focus:opacity-100 peer-focus:scale-100 opacity-0 scale-0"
+                          alt="desc-arrow"
+                        />
+                      </div>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
