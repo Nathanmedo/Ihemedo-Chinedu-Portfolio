@@ -204,3 +204,16 @@ html{
 .image-ratio{
   aspect-ratio: 3/4;
 }
+
+.highlight {
+    background: linear-gradient(120deg, #e45c22 0%, #d65219 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 60%;
+    background-position: 0 85%;
+    padding: 0 4px;
+    transition: background-size 0.8s ease-out;
+}
+
+.highlight.active {
+    background-size: 100% 70%;
+}

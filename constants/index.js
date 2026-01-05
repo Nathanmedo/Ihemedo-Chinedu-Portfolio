@@ -132,3 +132,5 @@ export const defaultWorks = [
       "A Telegram bot that automates crypto trading, rewards users for viewing ads, and supports referral bonuses. Built with Pyrogram.",
   },
 ];
+
+export const sections = ["hero", "story", "skills", "works", "contact", "footer"]

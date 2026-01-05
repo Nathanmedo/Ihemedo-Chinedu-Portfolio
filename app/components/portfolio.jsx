@@ -6,14 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
-import { defaultWorks } from "@/constants";
+import { defaultWorks, sections } from "@/constants";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin", "latin-ext"],
 });
 
-export default function Portfolio() {
+export default function Portfolio({active}) {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const ref = useRef(null);
   const textInView = useInView(ref, { once: true });
@@ -26,38 +26,34 @@ export default function Portfolio() {
     "Experimental/UI Showcase",
     "Foundational-Projects",
   ];
-  
-  
+
   const [works, setWorks] = useState(defaultWorks);
-  
-  useEffect(()=>{
-    async function fetchProjects(){
+
+  useEffect(() => {
+    async function fetchProjects() {
       try {
-        const response = await fetch('/api/portfolio');
+        const response = await fetch("/api/portfolio");
         let data = await response.json();
-        console.log(data)
-        data = data.map((item)=> (
-          {
-            id: item?._id,
-            title: item?.name,
-            category: "all",
-            image: item?.imageUrl,
-            year: item?.yearCreated,
-            url: item?.htmlUrl,
-            details: item?.description || "No description available",
-          }
-        ))
-        setWorks((prev)=> [...prev, ...data])
-      }catch(err){
-        console.log(err)
+        console.log(data);
+        data = data.map((item) => ({
+          id: item?._id,
+          title: item?.name,
+          category: "all",
+          image: item?.imageUrl,
+          year: item?.yearCreated,
+          url: item?.htmlUrl,
+          details: item?.description || "No description available",
+        }));
+        setWorks((prev) => [...prev, ...data]);
+      } catch (err) {
+        console.log(err);
       }
     }
 
     fetchProjects();
 
-    return ()=> setWorks(defaultWorks)
-  }, [])
-
+    return () => setWorks(defaultWorks);
+  }, []);
 
   const filteredWorks = works.filter((work, index, self) => {
     if (selectedCategory === "all") {
@@ -70,12 +66,23 @@ export default function Portfolio() {
     <section id="works" className={`bg-black py-20 ${poppins.className}`}>
       <div ref={ref} className="container mx-auto px-4">
         <motion.h2
-          className="mb-12 text-center text-3xl font-bold tracking-wider uppercase sm:text-4xl"
+          className="mb-12 text-center relative text-3xl z-10 font-bold tracking-wider uppercase sm:text-4xl"
           initial={{ opacity: 0 }}
           animate={textInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
           My Works
+          {active === sections[3] && (
+            <motion.img
+              initial={{ rotate: 0, scale:0 }}
+              whileInView={{ rotate: 360, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.5, type: "spring" }}
+              viewport={{ once: true }}
+              className={`absolute size-[400px] z-[-1]  top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%]`}
+              src="/assets/images/work confetti.png"
+              alt="deco"
+            />
+          )}
         </motion.h2>
         <div className="mb-12 flex flex-wrap justify-center gap-4">
           {categories.map((category) => (
@@ -109,7 +116,10 @@ export default function Portfolio() {
                         <img
                           src={work.image}
                           alt={work.title}
-                          onError={(e)=> {e.currentTarget.src = "/assets/images/No Image placeholder.svg";}}
+                          onError={(e) => {
+                            e.currentTarget.src =
+                              "/assets/images/No Image placeholder.svg";
+                          }}
                           className="w-full transition-transform duration-500 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 lg:group-hover:opacity-100">

@@ -2,9 +2,13 @@
 
 import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
+import { sections } from "@/constants";
 
-export default function Hero() {
-  const canvasRef = useRef(null)
+
+export default function Hero({ active }) {
+  console.log(active)
+  const canvasRef = useRef(null);
+
 
   useEffect(() => {
     if (!canvasRef.current) return
@@ -82,27 +86,53 @@ export default function Hero() {
   }, [])
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <section id={sections[0]} className="relative h-screen w-full overflow-hidden">
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full bg-black" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
         <motion.h1
-          className="mb-6 text-6xl font-bold tracking-tighter sm:text-7xl lg:text-8xl"
+          className="mb-6 text-6xl relative z-10 font-bold tracking-tighter sm:text-7xl lg:text-8xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           IHEMEDO CHINEDU
+          {active === sections[0] && <>
+            <motion.span initial={{ opacity: 0, width: 0 }}
+              animate={{ opacity: 1, width: "105%" }}
+              transition={{ duration: 0.8, delay: 0.5 }} className="absolute -z-[10]   inset-0 left-[50%] transform -translate-x-[50%] bg-[#e45c22]/20"></motion.span>
+            <motion.span
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="absolute -top-[5px] -left-[28px] h-4 w-4 rounded-full bg-white"></motion.span>
+            <motion.span
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 1 }}
+              className="absolute -left-[22px] h-full w-1  bg-white"></motion.span>
+            <motion.span
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1, origin: "bottom" }}
+              transition={{ duration: 0.8, delay: 1 }}
+              className="absolute -right-[22px] h-full w-1  bg-white"></motion.span>
+            <motion.span
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="absolute -bottom-[5px] -right-[28px] h-4 w-4 rounded-full bg-white"></motion.span>
+          </>
+          }
         </motion.h1>
         <motion.p
-          className="max-w-[600px] text-lg text-gray-400 sm:text-xl"
+          className="max-w-[600px] text-lg text-gray-200 sm:text-xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Software Engineer for web and mobile.
+          Software Engineer for <strong>web and mobile.</strong>
         </motion.p>
       </div>
-    </div>
+    </section>
   )
 }
 
