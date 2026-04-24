@@ -3,6 +3,36 @@
 export const defaultWorks = [
   {
     id: 1,
+    title: "PushShamer",
+    category: "Backend-API",
+    image: "/assets/images/push-shamer.gif",
+    year: "2025",
+    url: "https://github.com/Nathanmedo/PushShamer",
+    details:
+      "An AI-powered GitHub App that reviews your code and provides constructive feedback on pull requests and issues.",
+  },
+  {
+    id: 3,
+    title: "Telegram-Bot",
+    category: "Backend-API",
+    image: "/assets/images/telegram-bot.png",
+    year: "2025",
+    url: "https://github.com/Nathanmedo/telegram-bot",
+    details:
+      "A Telegram bot that automates crypto trading, rewards users for viewing ads, and supports referral bonuses. Built with Pyrogram.",
+  },
+  {
+    id: 4,
+    title: "PrintFlow",
+    category: "Frontend-Only",
+    image: "/assets/images/website-vid.gif",
+    year: "2026",
+    url: "https://professional-landing-page-b0omy87l3-ihemedo-chinedus-projects.vercel.app/",
+    details:
+      "Fast Material Supply Landing Page",
+  },
+  {
+    id: 12,
     title: "Rehab's store",
     category: "Ecommerce-Projects",
     image: "/assets/images/Ecommerce-frontend.png",
@@ -22,7 +52,7 @@ export const defaultWorks = [
       "This is an Ecommerce Store that sells Items. It is built with NextJs and wix API",
   },
   {
-    id: 3,
+    id: 13,
     title: "Kanban App",
     category: "Productivity-tools",
     image: "/assets/images/kanban-app.png",
@@ -32,7 +62,7 @@ export const defaultWorks = [
       "This is a Kanban App that helps you manage your tasks. It is built with React and TailwindCSS",
   },
   {
-    id: 4,
+    id: 14,
     title: "Grocery-List App",
     category: "Productivity-tools",
     image: "/assets/images/todo-list.png",
@@ -111,26 +141,7 @@ export const defaultWorks = [
     details:
       "This is a UI work that focuses on promoting a companies product. It is built with NextJS, TaiwindCSS, gsap, framer-motion etc.",
   },
-  {
-    id: 12,
-    title: "PushShamer",
-    category: "Backend-API",
-    image: "/assets/images/push-shamer.gif",
-    year: "2025",
-    url: "https://github.com/Nathanmedo/PushShamer",
-    details:
-      "An AI-powered GitHub App that reviews your code and provides constructive feedback on pull requests and issues.",
-  },
-  {
-    id: 13,
-    title: "Telegram-Bot",
-    category: "Backend-API",
-    image: "/assets/images/telegram-bot.png",
-    year: "2025",
-    url: "https://github.com/Nathanmedo/telegram-bot",
-    details:
-      "A Telegram bot that automates crypto trading, rewards users for viewing ads, and supports referral bonuses. Built with Pyrogram.",
-  },
+  
 ];
 
 export const sections = ["hero", "story", "skills", "works", "contact", "footer"]

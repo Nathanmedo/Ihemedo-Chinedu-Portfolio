@@ -100,31 +100,6 @@ export default function Hero({ active }) {
           transition={{ duration: 0.8 }}
         >
           IHEMEDO CHINEDU
-          {active === sections[0] && (
-            <>
-              <motion.span
-                initial={{
-                  opacity: 0,
-                  width: 0,
-                  borderTopWidth: 0,
-                  borderRightWidth: 0,
-                  borderBottomWidth: 0,
-                  borderLeftWidth: 0,
-                  borderColor: "#fffff",
-                }}
-                animate={{
-                  opacity: 1,
-                  width: "105%",
-                  borderTopWidth: 2,
-                  borderRightWidth: 8,
-                  borderBottomWidth: 6,
-                  borderLeftWidth: 2,
-                }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="absolute -z-[10] rounded-sm   inset-0 left-[50%] transform -translate-x-[50%] bg-[#e45c22]/20"
-              ></motion.span>
-            </>
-          )}
         </motion.h1>
         <motion.p
           className="max-w-[600px] text-lg text-gray-200 sm:text-xl"
@@ -134,6 +109,11 @@ export default function Hero({ active }) {
         >
           Software Engineer for <strong>web and mobile.</strong>
         </motion.p>
+        <div class="box absolute bottom-40">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </section>
   );
