@@ -27,7 +27,7 @@ export const defaultWorks = [
     category: "Frontend-Only",
     image: "/assets/images/website-vid.gif",
     year: "2026",
-    url: "https://professional-landing-page-9zh0oqopu-ihemedo-chinedus-projects.vercel.app/",
+    url: "https://professional-landing-page-b0omy87l3-ihemedo-chinedus-projects.vercel.app/",
     details:
       "Fast Material Supply Landing Page",
   },
