@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { FaTiktok } from "react-icons/fa"
 
 export default function Footer() {
   return (
@@ -13,8 +14,11 @@ export default function Footer() {
             <a href="https://x.com/nathan_medo?s=21" className="text-gray-400 hover:text-white">
               <Twitter />
             </a>
-            <a href="https://www.linkedin.com/in/chinedu-ihemedo-2307a4284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="text-gray-400 hover:text-white">
+            <a href="https://www.linkedin.com/in/chinedu-ihemedo-2307a4284" className="text-gray-400 hover:text-white">
               <Linkedin />
+            </a>
+            <a href="https://www.tiktok.com/@nathanmedo_devs?_r=1&_t=ZS-965I4iASiXd" className="text-gray-400 hover:text-white">
+              <FaTiktok size={24} />
             </a>
           </div>
         </div>

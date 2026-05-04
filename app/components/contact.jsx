@@ -18,13 +18,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { Poppins } from "next/font/google";
 import { sections } from "@/constants";
 
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin", "latin-ext"],
-});
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -83,7 +78,7 @@ export default function Contact({ active }) {
   return (
     <section
       id="contact"
-      className={`relative overflow-hidden bg-zinc-900 py-20 ${poppins.className}`}
+      className={`relative overflow-hidden bg-zinc-900 py-20`}
     >
       <div className="container relative z-10 mx-auto px-4 flex flex-col items-center">
         <motion.div

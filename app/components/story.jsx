@@ -4,23 +4,15 @@ import { sections } from "@/constants";
 import { useActiveSection } from "@/utils/hooks/useActiveSection";
 import { easeInOut, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { Poppins, Montserrat } from "next/font/google";
 import Image from "next/image";
 
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin", "latin-ext"],
-});
-const montserrat = Montserrat({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin", "latin-ext"],
-});
+
 
 export default function Story({ active }) {
   return (
     <section
       id={sections[1]}
-      className={`${poppins.className} py-24 bg-zinc-900 relative`}
+      className={` py-24 bg-zinc-900 relative`}
     >
       {Array.from({ length: 4 }, (_, i) => {
         const size = Math.random() * 400 + 100;

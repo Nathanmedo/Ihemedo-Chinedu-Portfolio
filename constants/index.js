@@ -145,3 +145,123 @@ export const defaultWorks = [
 ];
 
 export const sections = ["hero", "story", "skills", "works", "contact", "footer"]
+
+export const technologies = [
+    {
+      name: "Next.js",
+      color: "from-black to-gray-800",
+      textColor: "text-white",
+      border: "border-gray-700",
+      icon: "/nextjs_icon_dark.svg",
+      description:
+        "A React framework for server-side rendering and static site generation.",
+    },
+    {
+      name: "Nest.js",
+      color: "from-pink-500 to-white",
+      textColor: "text-white",
+      border: "border-gray-700",
+      icon: "/nestjs.svg",
+      description:
+        "A progressive Node.js framework for building efficient and scalable server-side applications.",
+    },
+    {
+      name: "React",
+      color: "from-blue-400 to-blue-600",
+      textColor: "text-white",
+      border: "border-blue-300",
+      icon: "/assets/tech/reactjs.png",
+      description:
+        "A JavaScript library for building user interfaces with reusable components.",
+    },
+    {
+      name: "TypeScript",
+      color: "from-blue-600 to-blue-800",
+      textColor: "text-white",
+      border: "border-blue-500",
+      icon: "/typescript.svg",
+      description:
+        "A typed superset of JavaScript that compiles to plain JavaScript.",
+    },
+    {
+      name: "JavaScript",
+      color: "from-yellow-300 to-yellow-500",
+      textColor: "text-black",
+      border: "border-yellow-200",
+      icon: "/assets/tech/javascript.png",
+      description:
+        "A high-level programming language for web development and beyond.",
+    },
+    {
+      name: "HTML",
+      color: "from-orange-500 to-red-600",
+      textColor: "text-white",
+      border: "border-orange-400",
+      icon: "/assets/tech/html.png",
+      description:
+        "The standard markup language for creating web pages and web applications.",
+    },
+    {
+      name: "CSS",
+      color: "from-blue-400 to-blue-600",
+      textColor: "text-white",
+      border: "border-blue-300",
+      icon: "/assets/tech/css.png",
+      description:
+        "A style sheet language used for describing the presentation of a document.",
+    },
+    {
+      name: "Tailwind",
+      color: "from-blue-600 to-blue-800",
+      textColor: "text-white",
+      border: "border-blue-400",
+      icon: "/assets/tech/tailwind.png",
+      description:
+        "A utility-first CSS framework for rapidly building custom user interfaces.",
+    },
+    {
+      name: "Node.js",
+      color: "from-green-500 to-green-700",
+      textColor: "text-white",
+      border: "border-green-400",
+      icon: "/assets/tech/nodejs.png",
+      description:
+        "A JavaScript runtime built on Chrome's V8 JavaScript engine for server-side development.",
+    },
+    {
+      name: "MongoDB",
+      color: "from-green-600 to-green-800",
+      textColor: "text-white",
+      border: "border-green-500",
+      icon: "/assets/tech/mongodb.png",
+      description:
+        "A NoSQL database program using JSON-like documents with optional schemas.",
+    },
+    {
+      name: "Docker",
+      color: "from-blue-500 to-blue-700",
+      textColor: "text-white",
+      border: "border-blue-400",
+      icon: "/assets/tech/docker.png",
+      description:
+        "A platform for developing, shipping, and running applications in containers.",
+    },
+    {
+      name: "Git",
+      color: "from-orange-500 to-orange-700",
+      textColor: "text-white",
+      border: "border-orange-400",
+      icon: "/assets/tech/git.png",
+      description:
+        "A distributed version control system for tracking changes in source code.",
+    },
+    {
+      name: "Figma",
+      color: "from-purple-500 to-purple-700",
+      textColor: "text-white",
+      border: "border-purple-400",
+      icon: "/assets/tech/figma.png",
+      description:
+        "A vector graphics editor and prototyping tool for UI/UX design.",
+    },
+  ];

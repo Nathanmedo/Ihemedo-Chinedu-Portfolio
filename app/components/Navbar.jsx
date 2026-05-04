@@ -1,17 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { Poppins } from "next/font/google";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin", "latin-ext"],
-});
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -26,7 +21,7 @@ export default function Navbar() {
     <>
       {/* Desktop Navbar */}
       <nav
-        className={`z-[9999] right-0 p-4 absolute top-0 w-full ${poppins.className}`}
+        className={`z-[9999] right-0 p-4 absolute top-0 w-full`}
       >
         <div className="container mx-auto flex items-center justify-between">
           <Link className="flex items-center gap-2" href="#contact">
@@ -45,7 +40,7 @@ export default function Navbar() {
               />
             </motion.div>
             <motion.div
-              className={`${poppins.className} uppercase font-bold tracking-tighter hidden md:block`}
+              className={`uppercase font-bold tracking-tighter hidden md:block`}
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}

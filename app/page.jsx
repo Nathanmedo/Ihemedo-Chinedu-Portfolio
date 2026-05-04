@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import Hero from "./components/hero"
 import Gallery from "./components/gallery"
@@ -10,13 +10,7 @@ import Navbar from "./components/Navbar"
 import { useActiveSection } from "@/utils/hooks/useActiveSection"
 import { sections } from "@/constants"
 
-export const metadata = {
-  title : {
-    default: "Nathanmedo_devs",
-    template: '%s | Software Engineer'
-  },
-  description: "Software developer crafting fast, scalable, and user-focused web experiences. I turn ideas into clean, functional products with real-world impact."
-}
+
 
 export default function Page() {
   const active = useActiveSection(sections)

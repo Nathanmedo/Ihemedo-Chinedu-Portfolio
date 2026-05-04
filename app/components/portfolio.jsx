@@ -4,14 +4,10 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Poppins } from "next/font/google";
 import Link from "next/link";
 import { defaultWorks, sections } from "@/constants";
 
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin", "latin-ext"],
-});
+
 
 export default function Portfolio({active}) {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -63,7 +59,7 @@ export default function Portfolio({active}) {
   });
 
   return (
-    <section id="works" className={`bg-black py-20 ${poppins.className}`}>
+    <section id="works" className={`bg-black py-20 `}>
       <div ref={ref} className="container mx-auto px-4">
         <motion.h2
           className="mb-12 text-center relative text-3xl z-10 font-bold tracking-wider uppercase sm:text-4xl"
