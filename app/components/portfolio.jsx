@@ -133,7 +133,7 @@ export default function Portfolio({active}) {
                     </CardContent>
                   </Card>
                   <div className="lg:hidden mt-2 ">
-                    <div className="flex flex-col items-center justify-center bg-black/60">
+                    <div className="flex flex-col items-center justify-center">
                       <h3 className="  text-white font-bold uppercase text-[16px] tracking-wider text-sm">
                         {work.title}
                       </h3>

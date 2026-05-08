@@ -96,7 +96,7 @@ export default function Contact({ active }) {
             </p>
 
             {/* Big Heading */}
-            <div className="flex items-center justify-center flex-wrap text-center md:space-x-8 leading-none font-black uppercase tracking-tight mb-10">
+            <div className="flex items-center justify-center flex-wrap text-center gap-x-8 leading-none font-black uppercase tracking-tight mb-10">
               <h1 className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem]">
                 Get In
               </h1>
@@ -121,7 +121,7 @@ export default function Contact({ active }) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mx-auto w-[80%] max-w-fit z-10 relative"
+          className="mx-auto w-[100%] md:w-[30%]  z-10 relative"
         >
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
