@@ -4,10 +4,8 @@ import { FaTiktok } from "react-icons/fa";
 import { FACEBOOK, GITHUB, INSTAGRAM, LINKEDIN, TIKTOK, TWITTER } from "@/constants";
 
 export default function Footer() {
-  let date;
-  if (window != undefined) {
-    date = new Date();
-  }
+  let date = new Date();
+
 
   return (
     <footer className="relative overflow-hidden bg-[#efeee8] text-[#111111] px-6 md:px-12 py-16">
