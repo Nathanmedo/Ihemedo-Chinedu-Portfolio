@@ -59,7 +59,7 @@ export default function Portfolio({active}) {
   });
 
   return (
-    <section id="works" className={`bg-black py-20 `}>
+    <section id="works" className={`bg-zinc-900 py-20 `}>
       <div ref={ref} className="container mx-auto px-4">
         <motion.h2
           className="mb-12 text-center relative text-3xl z-10 font-bold tracking-wider uppercase sm:text-4xl"
@@ -72,7 +72,7 @@ export default function Portfolio({active}) {
             <motion.img
               initial={{ rotate: 0, scale:0 }}
               whileInView={{ rotate: 360, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.5, type: "spring" }}
+              transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
               viewport={{ once: true }}
               className={`absolute size-[400px] z-[-1]  top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%]`}
               src="/assets/images/work confetti.png"

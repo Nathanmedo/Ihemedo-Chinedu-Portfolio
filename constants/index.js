@@ -265,3 +265,10 @@ export const technologies = [
         "A vector graphics editor and prototyping tool for UI/UX design.",
     },
   ];
+
+export const FACEBOOK = "https://www.facebook.com/share/1DENTrPrfq/?mibextid=wwXIfr"
+export const INSTAGRAM = "https://www.instagram.com/nathanmedo_devs?igsh=MW03aWg2N2RpY3R3Mw%3D%3D&utm_source=qr"
+export const LINKEDIN = "https://www.linkedin.com/in/chinedu-ihemedo-2307a4284"
+export const TIKTOK = "https://www.tiktok.com/@nathanmedo_devs?_r=1&_t=ZS-965I4iASiXd"
+export const TWITTER = "https://x.com/nathan_medo?s=21"
+export const GITHUB = "https://github.com/Nathanmedo"

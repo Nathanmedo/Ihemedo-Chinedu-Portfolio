@@ -104,7 +104,7 @@ export default function Story({ active }) {
                 className="relative"
               >
                 <a
-                  href="/assets/files/Ihemedo_Chinedu_Resume.pdf"
+                  href="/assets/files/my_resume_2026"
                   download
                   className="inline-flex items-center px-6 py-3 border border-black text-black hover:bg-inherit hover:text-white transition-colors duration-300 bg-white"
                 >

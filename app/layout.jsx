@@ -1,3 +1,4 @@
+import ScrollToTop from "@/components/ui/scrollToTop"
 import "@/styles/globals.css"
 import { Bricolage_Grotesque } from "next/font/google"
 import React from "react" // Import React
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={bricolage.className}>{children}
         <Toaster richColors position="bottom-right"/>
+        <ScrollToTop />
       </body>
     </html>
   )

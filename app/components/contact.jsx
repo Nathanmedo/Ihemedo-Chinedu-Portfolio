@@ -19,7 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { sections } from "@/constants";
-
+import { ArrowUpRight } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -78,7 +78,7 @@ export default function Contact({ active }) {
   return (
     <section
       id="contact"
-      className={`relative overflow-hidden bg-zinc-900 py-20`}
+      className={`relative overflow-hidden bg-black py-20`}
     >
       <div className="container relative z-10 mx-auto px-4 flex flex-col items-center">
         <motion.div
@@ -86,33 +86,42 @@ export default function Contact({ active }) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mx-auto max-w-2xl text-center flex flex-col items-center justify-center"
+          className="mx-auto relative overflow-hidden text-center flex flex-col items-center justify-center"
         >
-          <h2 className="mb-4 text-3xl z-10 flex items-center justify-center max-w-fit  font-bold  tracking-tighter sm:text-4xl relative">
-            Get in Touch
-            {active === sections[4] && (
-              <motion.img
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.5, type: "spring" }}
-                viewport={{ once: true }}
-                className={`absolute size-[100px] z-[-1] right-[-80px]`}
-                src="/assets/images/phone.png"
-                alt="deco"
-              />
-            )}
-          </h2>
-          <p className="mb-8 text-gray-400 z-10 relative">
-            Interested in collaborating or commissioning a piece? Let's create
-            something amazing together.
-          </p>
+
+          <div className="relative z-10 max-w-7xl mx-auto">
+            {/* Top Text */}
+            <p className="text-center text-sm md:text-base mb-6 text-white">
+              Got a project? Need an unfair advantage?
+            </p>
+
+            {/* Big Heading */}
+            <div className="flex items-center justify-center flex-wrap text-center md:space-x-8 leading-none font-black uppercase tracking-tight mb-10">
+              <h1 className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem]">
+                Get In
+              </h1>
+
+              <div className="flex items-center justify-center">
+                {/* Circle */}
+                <div className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem]">
+                  T
+                </div>
+                <div className="w-12 h-12 flex items-center justify-center md:w-28 md:h-28 rounded-full bg-[#e45c22] mx-1 md:mx-3">
+                  <ArrowUpRight size={120} />
+                </div>
+                <h1 className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem]">
+                  Uch
+                </h1>
+              </div>
+            </div>
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mx-auto max-w-md z-10 relative"
+          className="mx-auto w-[80%] max-w-fit z-10 relative"
         >
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
