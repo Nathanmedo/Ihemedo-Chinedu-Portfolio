@@ -101,7 +101,7 @@ export default function Footer() {
           {/* Right Side */}
           <div className="flex flex-col md:flex-row gap-10 md:gap-12 md:items-end">
             {/* Time */}
-            <div className="flex flex-row items-end gap-2">
+            <div className="flex flex-row items-center md:items-end gap-2">
               <span className="uppercase text-xs  tracking-widest  text-neutral-500">
                 Local Time
               </span>
