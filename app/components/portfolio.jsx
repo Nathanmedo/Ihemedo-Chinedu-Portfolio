@@ -59,7 +59,7 @@ export default function Portfolio({active}) {
   });
 
   return (
-    <section id="works" className={`bg-zinc-900 py-20 `}>
+    <section id="works" className={`relative bg-black py-20 `}>
       <div ref={ref} className="container mx-auto px-4">
         <motion.h2
           className="mb-12 text-center relative text-3xl z-10 font-bold tracking-wider uppercase sm:text-4xl"

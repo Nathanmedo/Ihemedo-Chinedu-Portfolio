@@ -1,11 +1,50 @@
+"use client"
+
 import Link from "next/link";
+import { useState } from "react";
+import { toast } from "sonner";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 import { FACEBOOK, GITHUB, INSTAGRAM, LINKEDIN, TIKTOK, TWITTER } from "@/constants";
 
+
 export default function Footer() {
   let date = new Date();
+  const [email, setEmail] = useState("")
+  const [loading, setLoading] = useState(false)
 
+  const handleNewsletterSub = async () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email.trim())) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    try {
+      setLoading(true)
+
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email })
+      })
+
+      if (!res.ok) {
+        toast.error("Unable to subscribe right now. Please try again.");
+        return;
+      }
+
+      toast.success("Subscribed successfully!");
+      setEmail("");
+    } catch (err) {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <footer className="relative overflow-hidden bg-[#efeee8] text-[#111111] px-6 md:px-12 py-16">
@@ -110,7 +149,7 @@ export default function Footer() {
             </div>
 
             {/* Newsletter */}
-            <div className="min-w-[300px]">
+            <div className="min-w-[300px] md:mr-12">
               <p className="uppercase text-xs tracking-widest mb-2 text-neutral-500">
                 Newsletter
               </p>
@@ -118,12 +157,19 @@ export default function Footer() {
               <div className="flex items-center border-b border-neutral-500 pb-2">
                 <input
                   type="email"
+                  value={email}
+                  onChange={(e)=> setEmail(e.target.value)}
                   placeholder="Enter your email"
                   className="bg-transparent outline-none text-sm w-full placeholder:text-neutral-500"
                 />
 
-                <button className="text-sm uppercase tracking-wide hover:opacity-60 transition">
-                  Join
+                <button
+                  type="button"
+                  onClick={handleNewsletterSub}
+                  disabled={loading}
+                  className="text-sm uppercase tracking-wide hover:opacity-60 transition disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  {loading ? "Joining..." : "Join"}
                 </button>
               </div>
             </div>

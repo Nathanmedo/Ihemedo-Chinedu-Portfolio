@@ -20,8 +20,8 @@ export default function Page() {
       <Navbar />
       <Hero active={active} />
       <Story active={active} />
-      <Gallery active={active}/>
       <Portfolio active={active} />
+      <Gallery active={active}/>
       <Contact active={active}/>
       <Footer />
     </main>

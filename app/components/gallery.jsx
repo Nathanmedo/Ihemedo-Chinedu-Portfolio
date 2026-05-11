@@ -22,7 +22,7 @@ export default function Gallery({ active }) {
   return (
     <section
       id="skills"
-      className={`relative py-20 bg-black`}
+      className={`relative py-20 bg-zinc-900`}
     >
       <div
         ref={ref}
@@ -46,8 +46,8 @@ export default function Gallery({ active }) {
                   scale: 1,
                   rotate: 360,
                   transition: {
-                    duration: 0.6,
-                    delay: 0.5,
+                    duration: 0.2,
+                    delay: 0.2,
                     type: "spring",
                   },
                 },

@@ -109,7 +109,7 @@ export default function Hero({ active }) {
         >
           Software Engineer for <strong>web and mobile.</strong>
         </motion.p>
-        <div class="box absolute bottom-40">
+        <div className="box absolute bottom-40">
           <span></span>
           <span></span>
           <span></span>
