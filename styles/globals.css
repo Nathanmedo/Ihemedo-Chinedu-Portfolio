@@ -242,6 +242,15 @@ html{
   @apply hover:underline underline-offset-0
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 @keyframes animate {
 	0% {
 		opacity: 0;

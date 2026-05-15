@@ -73,9 +73,9 @@ export default function Gallery({ active }) {
         <div className="grid gap-6 w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
           {technologies.map((tech, index) => (
             <div key={index} className="group relative">
-              <div className="group-hover:opacity-100 flex-col items-center opacity-0 absolute z-10 top-[-120px]">
+              <div className="group-hover:opacity-100 hidden lg:flex-col items-center opacity-0 absolute z-10 top-[-120px]">
                 <div
-                  className={`${nanum_pen_script.className} -mb-9 text-md w-[250px]`}
+                  className={`${nanum_pen_script.className}  -mb-9 text-md w-[250px]`}
                 >
                   {tech.description}
                 </div>

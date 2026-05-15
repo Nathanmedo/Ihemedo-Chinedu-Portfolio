@@ -78,7 +78,7 @@ export default function Contact({ active }) {
   return (
     <section
       id="contact"
-      className={`relative overflow-hidden bg-black py-20`}
+      className={`relative overflow-hidden bg-zinc-900 py-20`}
     >
       <div className="container relative z-10 mx-auto px-4 flex flex-col items-center">
         <motion.div

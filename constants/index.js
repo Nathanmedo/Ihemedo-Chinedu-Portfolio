@@ -1,5 +1,3 @@
-
-
 export const defaultWorks = [
   {
     id: 1,
@@ -28,8 +26,7 @@ export const defaultWorks = [
     image: "/assets/images/website-vid.gif",
     year: "2026",
     url: "https://professional-landing-page-9zh0oqopu-ihemedo-chinedus-projects.vercel.app/",
-    details:
-      "Fast Material Supply Landing Page",
+    details: "Fast Material Supply Landing Page",
   },
   {
     id: 12,
@@ -141,134 +138,198 @@ export const defaultWorks = [
     details:
       "This is a UI work that focuses on promoting a companies product. It is built with NextJS, TaiwindCSS, gsap, framer-motion etc.",
   },
-  
 ];
 
-export const sections = ["hero", "story", "skills", "works", "contact", "footer"]
+export const sections = [
+  "hero",
+  "story",
+  "skills",
+  "works",
+  "contact",
+  "footer",
+];
 
 export const technologies = [
-    {
-      name: "Next.js",
-      color: "from-black to-gray-800",
-      textColor: "text-white",
-      border: "border-gray-700",
-      icon: "/nextjs_icon_dark.svg",
-      description:
-        "A React framework for server-side rendering and static site generation.",
-    },
-    {
-      name: "Nest.js",
-      color: "from-pink-500 to-white",
-      textColor: "text-white",
-      border: "border-gray-700",
-      icon: "/nestjs.svg",
-      description:
-        "A progressive Node.js framework for building efficient and scalable server-side applications.",
-    },
-    {
-      name: "React",
-      color: "from-blue-400 to-blue-600",
-      textColor: "text-white",
-      border: "border-blue-300",
-      icon: "/assets/tech/reactjs.png",
-      description:
-        "A JavaScript library for building user interfaces with reusable components.",
-    },
-    {
-      name: "TypeScript",
-      color: "from-blue-600 to-blue-800",
-      textColor: "text-white",
-      border: "border-blue-500",
-      icon: "/typescript.svg",
-      description:
-        "A typed superset of JavaScript that compiles to plain JavaScript.",
-    },
-    {
-      name: "JavaScript",
-      color: "from-yellow-300 to-yellow-500",
-      textColor: "text-black",
-      border: "border-yellow-200",
-      icon: "/assets/tech/javascript.png",
-      description:
-        "A high-level programming language for web development and beyond.",
-    },
-    {
-      name: "HTML",
-      color: "from-orange-500 to-red-600",
-      textColor: "text-white",
-      border: "border-orange-400",
-      icon: "/assets/tech/html.png",
-      description:
-        "The standard markup language for creating web pages and web applications.",
-    },
-    {
-      name: "CSS",
-      color: "from-blue-400 to-blue-600",
-      textColor: "text-white",
-      border: "border-blue-300",
-      icon: "/assets/tech/css.png",
-      description:
-        "A style sheet language used for describing the presentation of a document.",
-    },
-    {
-      name: "Tailwind",
-      color: "from-blue-600 to-blue-800",
-      textColor: "text-white",
-      border: "border-blue-400",
-      icon: "/assets/tech/tailwind.png",
-      description:
-        "A utility-first CSS framework for rapidly building custom user interfaces.",
-    },
-    {
-      name: "Node.js",
-      color: "from-green-500 to-green-700",
-      textColor: "text-white",
-      border: "border-green-400",
-      icon: "/assets/tech/nodejs.png",
-      description:
-        "A JavaScript runtime built on Chrome's V8 JavaScript engine for server-side development.",
-    },
-    {
-      name: "MongoDB",
-      color: "from-green-600 to-green-800",
-      textColor: "text-white",
-      border: "border-green-500",
-      icon: "/assets/tech/mongodb.png",
-      description:
-        "A NoSQL database program using JSON-like documents with optional schemas.",
-    },
-    {
-      name: "Docker",
-      color: "from-blue-500 to-blue-700",
-      textColor: "text-white",
-      border: "border-blue-400",
-      icon: "/assets/tech/docker.png",
-      description:
-        "A platform for developing, shipping, and running applications in containers.",
-    },
-    {
-      name: "Git",
-      color: "from-orange-500 to-orange-700",
-      textColor: "text-white",
-      border: "border-orange-400",
-      icon: "/assets/tech/git.png",
-      description:
-        "A distributed version control system for tracking changes in source code.",
-    },
-    {
-      name: "Figma",
-      color: "from-purple-500 to-purple-700",
-      textColor: "text-white",
-      border: "border-purple-400",
-      icon: "/assets/tech/figma.png",
-      description:
-        "A vector graphics editor and prototyping tool for UI/UX design.",
-    },
-  ];
+  {
+    name: "Next.js",
+    color: "from-black to-gray-800",
+    textColor: "text-white",
+    border: "border-gray-700",
+    icon: "/nextjs_icon_dark.svg",
+    description:
+      "A React framework for server-side rendering and static site generation.",
+  },
+  {
+    name: "Nest.js",
+    color: "from-pink-500 to-white",
+    textColor: "text-white",
+    border: "border-gray-700",
+    icon: "/nestjs.svg",
+    description:
+      "A progressive Node.js framework for building efficient and scalable server-side applications.",
+  },
+  {
+    name: "React",
+    color: "from-blue-400 to-blue-600",
+    textColor: "text-white",
+    border: "border-blue-300",
+    icon: "/assets/tech/reactjs.png",
+    description:
+      "A JavaScript library for building user interfaces with reusable components.",
+  },
+  {
+    name: "TypeScript",
+    color: "from-blue-600 to-blue-800",
+    textColor: "text-white",
+    border: "border-blue-500",
+    icon: "/typescript.svg",
+    description:
+      "A typed superset of JavaScript that compiles to plain JavaScript.",
+  },
+  {
+    name: "JavaScript",
+    color: "from-yellow-300 to-yellow-500",
+    textColor: "text-black",
+    border: "border-yellow-200",
+    icon: "/assets/tech/javascript.png",
+    description:
+      "A high-level programming language for web development and beyond.",
+  },
+  {
+    name: "Python",
+    color: "from-blue-500 via-yellow-400 ",
+    textColor: "text-white",
+    border: "border-blue-400/40",
+    icon: "/assets/tech/python.png",
+    description:
+      "A powerful and versatile programming language used for web development, automation, AI, and backend systems.",
+  },
+  {
+    name: "HTML",
+    color: "from-orange-500 to-red-600",
+    textColor: "text-white",
+    border: "border-orange-400",
+    icon: "/assets/tech/html.png",
+    description:
+      "The standard markup language for creating web pages and web applications.",
+  },
+  {
+    name: "CSS",
+    color: "from-blue-400 to-blue-600",
+    textColor: "text-white",
+    border: "border-blue-300",
+    icon: "/assets/tech/css.png",
+    description:
+      "A style sheet language used for describing the presentation of a document.",
+  },
+  {
+    name: "Tailwind",
+    color: "from-blue-600 to-blue-800",
+    textColor: "text-white",
+    border: "border-blue-400",
+    icon: "/assets/tech/tailwind.png",
+    description:
+      "A utility-first CSS framework for rapidly building custom user interfaces.",
+  },
+  {
+    name: "Node.js",
+    color: "from-green-500 to-green-700",
+    textColor: "text-white",
+    border: "border-green-400",
+    icon: "/assets/tech/nodejs.png",
+    description:
+      "A JavaScript runtime built on Chrome's V8 JavaScript engine for server-side development.",
+  },
+  {
+    name: "MongoDB",
+    color: "from-green-600 to-green-800",
+    textColor: "text-white",
+    border: "border-green-500",
+    icon: "/assets/tech/mongodb.png",
+    description:
+      "A NoSQL database program using JSON-like documents with optional schemas.",
+  },
+  {
+    name: "Docker",
+    color: "from-blue-500 to-blue-700",
+    textColor: "text-white",
+    border: "border-blue-400",
+    icon: "/assets/tech/docker.png",
+    description:
+      "A platform for developing, shipping, and running applications in containers.",
+  },
+  {
+    name: "Git",
+    color: "from-orange-500 to-orange-700",
+    textColor: "text-white",
+    border: "border-orange-400",
+    icon: "/assets/tech/git.png",
+    description:
+      "A distributed version control system for tracking changes in source code.",
+  },
+  {
+    name: "Figma",
+    color: "from-purple-500 to-purple-700",
+    textColor: "text-white",
+    border: "border-purple-400",
+    icon: "/assets/tech/figma.png",
+    description:
+      "A vector graphics editor and prototyping tool for UI/UX design.",
+  },
+];
 
-export const FACEBOOK = "https://www.facebook.com/share/1DENTrPrfq/?mibextid=wwXIfr"
-export const INSTAGRAM = "https://www.instagram.com/nathanmedo_devs?igsh=MW03aWg2N2RpY3R3Mw%3D%3D&utm_source=qr"
-export const LINKEDIN = "https://www.linkedin.com/in/chinedu-ihemedo-2307a4284"
-export const TIKTOK = "https://www.tiktok.com/@nathanmedo_devs?_r=1&_t=ZS-965I4iASiXd"
-export const TWITTER = "https://x.com/nathan_medo?s=21"
-export const GITHUB = "https://github.com/Nathanmedo"
+export const reviews = [
+  {
+    name: "Gerrard Obiora",
+    role: "Frontend Reviewer",
+    src: "/assets/images/reviews/gerrard.png",
+    review:
+      "I really like the way your work is presented. Everything feels intentional, modern, and polished. The overall experience already feels like something from an experienced developer.",
+    rating: "5.0",
+  },
+
+  {
+    name: "Okonkwo Chidimdindu",
+    role: "Graphic Designer",
+    review:
+      "Your work has strong potential and already stands out visually. I especially think your projects and experience deserve more spotlight because they show real skill and creativity.",
+    rating: "4.5",
+  },
+
+  {
+    name: "Immanuel Faluyi",
+    role: "Developer",
+    src: "/assets/images/reviews/immanuel.png",
+    review:
+      "Your animations and interface work feel very smooth and modern. The overall quality of your frontend work already feels professional and well thought out.",
+    rating: "4.5",
+  },
+
+  {
+    name: "Joel Ukpong",
+    role: "Developer",
+    review:
+      "What impressed me most is that your work feels original and personal instead of looking generic. You can clearly tell there’s creativity and real effort behind it.",
+    rating: "4.5",
+  },
+
+  {
+    name: "Paul Falae",
+    role: "Creative Reviewer",
+    review:
+      "I love how interactive and engaging your work feels. The animations are clean, the design choices make sense, and the overall experience feels refined.",
+    rating: "4.0",
+  },
+];
+
+//socials
+
+export const FACEBOOK =
+  "https://www.facebook.com/share/1DENTrPrfq/?mibextid=wwXIfr";
+export const INSTAGRAM =
+  "https://www.instagram.com/nathanmedo_devs?igsh=MW03aWg2N2RpY3R3Mw%3D%3D&utm_source=qr";
+export const LINKEDIN = "https://www.linkedin.com/in/chinedu-ihemedo-2307a4284";
+export const TIKTOK =
+  "https://www.tiktok.com/@nathanmedo_devs?_r=1&_t=ZS-965I4iASiXd";
+export const TWITTER = "https://x.com/nathan_medo?s=21";
+export const GITHUB = "https://github.com/Nathanmedo";

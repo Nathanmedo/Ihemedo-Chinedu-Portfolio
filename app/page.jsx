@@ -9,6 +9,7 @@ import Story from "./components/story"
 import Navbar from "./components/Navbar"
 import { useActiveSection } from "@/utils/hooks/useActiveSection"
 import { sections } from "@/constants"
+import ReviewsSection from "./components/reviews"
 
 
 
@@ -22,6 +23,7 @@ export default function Page() {
       <Story active={active} />
       <Portfolio active={active} />
       <Gallery active={active}/>
+      <ReviewsSection active={active} />
       <Contact active={active}/>
       <Footer />
     </main>
