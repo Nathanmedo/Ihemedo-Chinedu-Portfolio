@@ -11,6 +11,56 @@ export const defaultWorks = [
   },
   {
     id: 3,
+    title: "YCT smartbot",
+    category: "AI",
+    image: "/assets/images/yct-chatbot.png",
+    year: "2026",
+    url: "https://github.com/Nathanmedo/ydta-chatbot-2.0.git",
+    details:
+      "An FAQ chatbot for Yaba College Of Technology that gives accurate and detailed response to questions related to the college.",
+  },
+  {
+    id: 8,
+    title: "Bahamas Hotel Management",
+    category: "Backend-API",
+    image: "/assets/images/bahamas.png",
+    year: "2025",
+    url: "https://github.com/Nathanmedo/bahamas-app.git",
+    details:
+      "An hotel management system that handles hotel bookings, food orders, and laundry for bahamas.",
+  },
+  {
+    id: 15,
+    title: "Bahamas Hotel Management",
+    category: "Mobile-App",
+    image: "/assets/images/bahamas.png",
+    year: "2025",
+    url: "https://github.com/Nathanmedo/bahamas-app.git",
+    details:
+      "An hotel management system that handles hotel bookings, food orders, and laundry for bahamas.",
+  },
+  {
+    id: 16,
+    title: "Independent Chemical Ent. Nig.",
+    category: "Frontend-Only",
+    image: "/assets/images/icn.gif",
+    year: "2026",
+    url: "https://independentchemnig.com",
+    details:
+      "A landing page with product preview for ICN.",
+  },
+  {
+    id: 5,
+    title: "PushShamer",
+    category: "AI",
+    image: "/assets/images/push-shamer.gif",
+    year: "2025",
+    url: "https://github.com/Nathanmedo/PushShamer",
+    details:
+      "An AI-powered GitHub App that reviews your code and provides constructive feedback on pull requests and issues.",
+  },
+  {
+    id: 3,
     title: "Telegram-Bot",
     category: "Backend-API",
     image: "/assets/images/telegram-bot.png",
@@ -29,16 +79,6 @@ export const defaultWorks = [
     details: "Fast Material Supply Landing Page",
   },
   {
-    id: 12,
-    title: "Rehab's store",
-    category: "Ecommerce-Projects",
-    image: "/assets/images/Ecommerce-frontend.png",
-    year: "2022",
-    url: "https://nathanmedo.github.io/E-commerce-Frontend",
-    details:
-      "This is a react app basically showcasing a cloth store. It is built with React and TaiiwindCSS",
-  },
-  {
     id: 2,
     title: "Independent Chemicals",
     category: "Ecommerce-Projects",
@@ -49,89 +89,9 @@ export const defaultWorks = [
       "This is an Ecommerce Store that sells Items. It is built with NextJs and wix API",
   },
   {
-    id: 13,
-    title: "Kanban App",
-    category: "Productivity-tools",
-    image: "/assets/images/kanban-app.png",
-    year: "2024",
-    url: "https://nathanmedo.github.io/kanban-app",
-    details:
-      "This is a Kanban App that helps you manage your tasks. It is built with React and TailwindCSS",
-  },
-  {
-    id: 14,
-    title: "Grocery-List App",
-    category: "Productivity-tools",
-    image: "/assets/images/todo-list.png",
-    year: "2023",
-    url: "https://nathanmedo.github.io/Todo-List",
-    details:
-      "This is a Grocery List App that helps you manage your groceries. It is built with React and TailwindCSS",
-  },
-  {
-    id: 5,
-    title: "Slider Effect Homepage",
-    category: "Frontend-Only",
-    image: "/assets/images/Slider-Effect.png",
-    year: "2024",
-    url: "https://nathanmedo.github.io/slider-effect",
-    details:
-      "This is an Early UI work . It is built with Html, CSS and Javascript.",
-  },
-  {
-    id: 10,
-    title: "Jidseg Company",
-    category: "Frontend-Only",
-    image: "/assets/images/Jidseg-frontend.png",
-    year: "2024",
-    url: "https://nathanmedo.github.io/company-prototype",
-    details:
-      "This is a  that serves job data to a frontend application. It is built with Html, CSS and Javascript.",
-  },
-  {
-    id: 11,
-    title: "NodeJs Job API",
-    category: "Backend-API",
-    image: "/assets/images/nodeapi.png",
-    url: "https://github.com/Nathanmedo/node-js",
-    year: "2024",
-    details:
-      "This is a NodeJs API that serves job data to a frontend application. It is built with ExpressJs and MongoDB.",
-  },
-  {
     id: 7,
-    title: "Grocery-List App",
-    category: "Foundational-Projects",
-    image: "/assets/images/todo-list.png",
-    year: "2023",
-    url: "https://nathanmedo.github.io/Todo-List",
-    details:
-      "This is a Grocery List App that helps you manage your groceries. It is built with React and TailwindCSS",
-  },
-  {
-    id: 8,
-    title: "Slider Effect Homepage",
-    category: "Foundational-Projects",
-    image: "/assets/images/Slider-Effect.png",
-    year: "2022",
-    url: "https://nathanmedo.github.io/slider-effect",
-    details:
-      "This is an Early UI work . It is built with Html, CSS and Javascript.",
-  },
-  {
-    id: 9,
-    title: "Slider Effect Homepage",
-    category: "Experimental/UI Showcase",
-    image: "/assets/images/Slider-Effect.png",
-    year: "2022",
-    url: "https://nathanmedo.github.io/slider-effect",
-    details:
-      "This is an Early UI work . It is built with Html, CSS and Javascript.",
-  },
-  {
-    id: 6,
     title: "ICN-web",
-    category: "Experimental/UI Showcase",
+    category: "Frontend-Only",
     image: "/assets/images/icn-web.png",
     year: "2025",
     url: "https://icnweb.vercel.app",
@@ -322,6 +282,28 @@ export const reviews = [
   },
 ];
 
+
+export const companies = [
+  {
+    id: 1,
+    name: "Independent Chemicals",
+    role: "Fullstack Developer",
+    logo: "/assets/company/icn logo.png",
+  },
+  {
+    id: 2,
+    name: "Yabatech",
+    role: "AI engineer",
+    logo: "/assets/company/Yabatech-logo.png",
+  },
+  {
+    id: 3,
+    name: "Bahamas",
+    role: "Software Engineer",
+    logo: "/assets/company/bahamas-logo.png",
+  },
+];
+
 //socials
 
 export const FACEBOOK =
@@ -333,3 +315,5 @@ export const TIKTOK =
   "https://www.tiktok.com/@nathanmedo_devs?_r=1&_t=ZS-965I4iASiXd";
 export const TWITTER = "https://x.com/nathan_medo?s=21";
 export const GITHUB = "https://github.com/Nathanmedo";
+
+

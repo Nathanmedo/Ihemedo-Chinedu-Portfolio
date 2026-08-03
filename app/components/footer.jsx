@@ -72,7 +72,7 @@ export default function Footer() {
                 <Link href="#works">Works</Link>
               </li>
               <li>
-                <Link className="pointer-events-none opacity-40" href="/reviews">Reviews</Link>
+                <Link className="" href="#reviews">Reviews</Link>
               </li>
               <li>
                 <Link href="#contact">Contact</Link>

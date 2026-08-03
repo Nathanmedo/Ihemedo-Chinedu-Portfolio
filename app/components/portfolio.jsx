@@ -15,12 +15,11 @@ export default function Portfolio({active}) {
   const textInView = useInView(ref, { once: true });
   const categories = [
     "all",
+    "AI",
     "Ecommerce-Projects",
-    "Productivity-tools",
     "Frontend-Only",
     "Backend-API",
-    "Experimental/UI Showcase",
-    "Foundational-Projects",
+    "Mobile-App"
   ];
 
   const [works, setWorks] = useState(defaultWorks);
@@ -59,7 +58,7 @@ export default function Portfolio({active}) {
   });
 
   return (
-    <section id="works" className={`relative bg-black py-20 `}>
+    <section id="works" className={`relative bg-zinc-800   py-20 `}>
       <div ref={ref} className="container mx-auto px-4">
         <motion.h2
           className="mb-12 text-center relative text-3xl z-10 font-bold tracking-wider uppercase sm:text-4xl"

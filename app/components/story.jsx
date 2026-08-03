@@ -12,7 +12,7 @@ export default function Story({ active }) {
   return (
     <section
       id={sections[1]}
-      className={` py-24 bg-zinc-900 relative`}
+      className={` py-24 bg-zinc-950 relative`}
     >
       {Array.from({ length: 4 }, (_, i) => {
         const size = Math.random() * 400 + 100;
@@ -136,7 +136,7 @@ export default function Story({ active }) {
             <div className="aspect-square relative overflow-hidden rounded-lg">
               <div className="absolute image-ratio inset-0 bg-gradient-to-br from-[#e45c22]/20 to-[#fffff]/20 z-10"></div>
               <img
-                src="/assets/images/portfolio-image.png"
+                src="/assets/images/ihemedo chinedu.jpeg"
                 alt="Profile"
                 className="w-full h-full object-cover object-top"
               />

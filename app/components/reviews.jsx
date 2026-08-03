@@ -48,7 +48,7 @@ export default function ReviewsSection({ active }) {
   };
 
   return (
-    <section className="bg-black py-28 overflow-hidden">
+    <section id="reviews" className="bg-black py-28 overflow-hidden">
       <div ref={ref} className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="mb-16">
@@ -144,7 +144,7 @@ export default function ReviewsSection({ active }) {
                 <div>
                   <Quote
                     size={30}
-                    className="text-blue-400 fill-blue-400 mb-4"
+                    className="text-[#e45c22]/80 fill-[#e45c22] mb-4"
                   />
 
                   <p className="text-4xl leading-[1.05] tracking-tight font-light">

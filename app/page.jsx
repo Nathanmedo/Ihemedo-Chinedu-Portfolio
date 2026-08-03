@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar"
 import { useActiveSection } from "@/utils/hooks/useActiveSection"
 import { sections } from "@/constants"
 import ReviewsSection from "./components/reviews"
+import Companies from "./components/companies"
 
 
 
@@ -21,6 +22,7 @@ export default function Page() {
       <Navbar />
       <Hero active={active} />
       <Story active={active} />
+      <Companies />
       <Portfolio active={active} />
       <Gallery active={active}/>
       <ReviewsSection active={active} />
