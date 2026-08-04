@@ -22,7 +22,7 @@ export default function Page() {
       <Navbar />
       <Hero active={active} />
       <Story active={active} />
-      <Companies />
+      <Companies active={active} />
       <Portfolio active={active} />
       <Gallery active={active}/>
       <ReviewsSection active={active} />

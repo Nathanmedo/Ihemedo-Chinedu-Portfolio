@@ -2,23 +2,22 @@
 
 import { motion } from "framer-motion";
 import { companies } from "@/constants";
+import { cn } from "@/lib/utils";
 
-
-export default function Companies() {
+export default function Companies({ active }) {
   return (
     <section
       id="companies"
       className="relative overflow-hidden py-24 bg-zinc-900"
     >
       <div className="container mx-auto px-6">
-
         {/* Heading */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: .6 }}
+          transition={{ duration: 0.6 }}
           className="mx-auto mb-16 max-w-2xl text-center"
         >
           <p className="mb-3 uppercase tracking-[0.35em]  text-sm">
@@ -39,9 +38,7 @@ export default function Companies() {
         {/* Companies */}
 
         <div className="grid gap-8 md:grid-cols-3">
-
           {companies.map((company, index) => (
-
             <motion.div
               key={company.id}
               initial={{
@@ -57,46 +54,37 @@ export default function Companies() {
                 scale: 1.02,
               }}
               transition={{
-                duration: .45,
-                delay: index * .15,
+                duration: 0.45,
+                delay: index * 0.15,
                 type: "spring",
                 stiffness: 220,
               }}
               viewport={{ once: true }}
               className="group relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-xl"
             >
-
               {/* Glow */}
 
-              <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
-
+              <div
+                className={cn(
+                  "absolute inset-0 opacity-0 transition duration-500 ",
+                  active == sections[6] && "opacity-100",
+                )}
+              >
                 <div className="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-[#e45c22]/20 blur-3xl" />
-
               </div>
 
               <div className="relative p-10">
-
                 {/* Logo */}
 
                 <div className="flex h-28 items-center justify-center">
-
                   <img
                     src={company.logo}
                     alt={company.name}
-                    className="
-                      max-h-14
-                      max-w-[170px]
-                      object-contain
-                      grayscale
-                      opacity-70
-                      transition-all
-                      duration-500
-                      group-hover:grayscale-0
-                      group-hover:opacity-100
-                      group-hover:scale-105
-                    "
+                    className={cn(
+                      "max-h-14 max-w-[170px] object-contain grayscale opacity-70 transition-all duration-500",
+                      active == sections[6] && "grayscale-0 opacity-100 scale-105",
+                    )}
                   />
-
                 </div>
 
                 {/* Divider */}
@@ -112,15 +100,10 @@ export default function Companies() {
                 <p className="mt-2 text-center text-sm tracking-wide text-zinc-400">
                   {company.role}
                 </p>
-
               </div>
-
             </motion.div>
-
           ))}
-
         </div>
-
       </div>
     </section>
   );

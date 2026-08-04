@@ -70,15 +70,6 @@ export const defaultWorks = [
       "A Telegram bot that automates crypto trading, rewards users for viewing ads, and supports referral bonuses. Built with Pyrogram.",
   },
   {
-    id: 4,
-    title: "PrintFlow",
-    category: "Frontend-Only",
-    image: "/assets/images/website-vid.gif",
-    year: "2026",
-    url: "https://professional-landing-page-9zh0oqopu-ihemedo-chinedus-projects.vercel.app/",
-    details: "Fast Material Supply Landing Page",
-  },
-  {
     id: 2,
     title: "Independent Chemicals",
     category: "Ecommerce-Projects",
@@ -107,6 +98,7 @@ export const sections = [
   "works",
   "contact",
   "footer",
+  "companies",
 ];
 
 export const technologies = [

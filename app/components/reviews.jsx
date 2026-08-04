@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import { ArrowLeft, ArrowRight, Quote, StarIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { reviews } from "@/constants";
@@ -135,8 +135,8 @@ export default function ReviewsSection({ active }) {
                   </div>
 
                   {/* Rating */}
-                  <div className="px-5 py-3 border border-neutral-300 rounded-full text-sm">
-                    &#11088; {review.rating}
+                  <div className="px-5 py-3 border border-neutral-300 gap-2 rounded-full text-sm">
+                    <StarIcon/> {review.rating}
                   </div>
                 </div>
 
