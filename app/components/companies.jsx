@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { companies } from "@/constants";
 import { cn } from "@/lib/utils";
+import { sections } from "@/constants";
 
 export default function Companies({ active }) {
   return (
