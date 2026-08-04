@@ -17,13 +17,8 @@ export default function Gallery({ active }) {
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
 
-  
-
   return (
-    <section
-      id="skills"
-      className={`relative py-20 bg-zinc-900`}
-    >
+    <section id="skills" className={`relative py-20 bg-zinc-900`}>
       <div
         ref={ref}
         className="container mx-auto px-4 flex flex-col items-center"
@@ -115,7 +110,33 @@ export default function Gallery({ active }) {
                   </h3>
                 </div>
 
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <div
+                  className="
+                  pointer-events-none
+                  absolute
+                  inset-0
+                  overflow-hidden
+                  rounded-lg
+                "
+                >
+                  <div
+                    className="
+                      absolute
+                      -left-[120%]
+                      top-0
+                      h-full
+                      w-[60%]
+                      rotate-12
+                      bg-gradient-to-r
+                      from-transparent
+                      via-white/30
+                      to-transparent
+                      transition-all
+                      duration-700
+                      ease-out
+                      group-hover:left-[140%]"
+                  />
+                </div>
               </motion.div>
             </div>
           ))}

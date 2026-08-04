@@ -135,8 +135,8 @@ export default function ReviewsSection({ active }) {
                   </div>
 
                   {/* Rating */}
-                  <div className="px-5 py-3 border border-neutral-300 gap-2 rounded-full text-sm">
-                    <StarIcon/> {review.rating}
+                  <div className="px-5 py-3 border border-neutral-300 flex items-center gap-2 rounded-full text-sm">
+                    <StarIcon size={18} /> {review.rating}
                   </div>
                 </div>
 
